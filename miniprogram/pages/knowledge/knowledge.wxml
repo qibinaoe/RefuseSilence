@@ -1,0 +1,41 @@
+<view>我是科普知识页面</view>
+
+
+<!-- 性教育知识板块 -->
+
+<view class="knowledge-btn-list">
+	<view class="education-knowledge knowledge-item" bindtap="switchEducationModule">
+		<view class="img-container">
+			<image class="btn-img" src="../../images/button_background/education-background.jpg" >
+			</image>
+		</view>
+		<view class="btn-text">
+			性教育知识板块
+		</view>
+	</view>
+
+	<!-- 法律板块 -->
+	<view class="law-knowledge knowledge-item" bindtap="switchLawModule">
+		<view class="img-container">
+			<image class="btn-img" src="../../images/button_background/law-background.jpg">
+			</image>
+		</view>
+		<view class="btn-text">
+			法律板块
+		</view>
+	</view>
+
+	<!-- 新闻板块 -->
+	<view class="news-knowledge knowledge-item" bindtap="switchNewsModule">
+		<view class="img-container">
+			<image class="btn-img"src="../../images/button_background/news-background.jpg">
+			</image>
+		</view>
+		<view class="btn-text">
+			新闻板块
+		</view>
+	</view>
+
+</view>
+
+<view class="bottom">我是底部</view>

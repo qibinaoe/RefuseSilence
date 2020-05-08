@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/knowledge/knowledge",
+    "pages/forum/forum",
+    "pages/user/user",
+    "pages/index/index",
+    "pages/education/education",
+    "pages/news/news",
+    "pages/laws/laws",
+    "pages/search/search"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "拒绝沉默",
+    "navigationBarTextStyle": "black"
+  },
+
+  "tabBar": {
+    "color": "#626567",
+    "selectedColor": "#2A8CE5",
+    "backgroundColor": "#FBFBFB",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/knowledge/knowledge",
+        "text": "科普",
+        "iconPath": "/images/icon/index.png",
+        "selectedIconPath": "/images/icon/index_focus.png"
+      },
+      {
+        "pagePath": "pages/forum/forum",
+        "text": "论坛",
+        "iconPath": "/images/icon/chat.png",
+        "selectedIconPath": "/images/icon/chat_focus.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "/images/icon/ring.png",
+        "selectedIconPath": "/images/icon/ring_focus.png"
+      }           
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
