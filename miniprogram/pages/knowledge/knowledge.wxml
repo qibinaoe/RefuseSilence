@@ -39,3 +39,19 @@
 </view>
 
 <view class="bottom">我是底部</view>
+
+
+<!-- 弹窗 -->
+<view>
+    <view class="fadeIn" wx:if="{{popQuestionaire}}">
+        <view class="weui-mask"></view>
+        <view class="weui-dialog">
+            <view class="weui-dialog__hd"><strong class="weui-dialog__title">问卷调查</strong></view>
+            <view class="weui-dialog__bd">欢迎填写问卷调查！根据内容我们能更好的理解您，让你享受更好的服务</view>
+            <view class="weui-dialog__ft">
+                <a class="weui-dialog__btn weui-dialog__btn_default" bindtap="closePop">取消</a>
+                <a class="weui-dialog__btn weui-dialog__btn_primary" bindtap="switchQuestinaire">确定</a>
+            </view>
+        </view>
+    </view>
+</view>

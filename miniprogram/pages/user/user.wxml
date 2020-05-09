@@ -31,7 +31,7 @@
 						<text class="icon-vip" style="margin-left:30rpx"></text>
 					</view>
 				</view>
-				<view class="kefu"><text class="icon-service"></text>谈心人</view>
+				<view class="kefu" bindtap="switchTalk"><text class="icon-service"></text>谈心人</view>
 			</view>
 			<!-- 签到 -->
 			<view class="qiandao">
@@ -48,20 +48,6 @@
 		<!-- 选项卡部分 -->
 		<view class="chioce">
 			<!-- 选项卡item -->
-			
-			<view class="choiceItem">
-				<!-- 
-					
-					因为切换为夜间模式需要使用自定义的tarbar，
-				  而这个小程序是一个初级学习项目，所以此功能暂时搁置 
-	
-				-->
-				<view class="">
-					<text class="icon-tip text-gray"></text>
-					<text style="margin-left:20rpx">夜间模式</text>
-				</view>
-				<switch></switch>
-			</view>
 			<view class="choiceItem">
 				<!-- 意见反馈需要使用button的open-type属性 此处没有设置-->
 				<view class="">
@@ -90,7 +76,7 @@
       <view class="choiceItem">
 				<view class="">
 					<text class="icon-list text-gray"></text>
-					<text style="margin-left:20rpx">问卷调查</text>
+					<text style="margin-left:20rpx" bindtap="switchQuestionaire">问卷调查</text>
 				</view>
 				<text class="icon-right text-gray"></text>
 			</view>

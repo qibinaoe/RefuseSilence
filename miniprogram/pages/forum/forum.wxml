@@ -6,13 +6,6 @@
 	<view class="nav">
 		<block>
 			<view class="navItem" bindtap="{{item.events}}" wx:for="{{navList}}" wx:key="index">
-				<!-- 
-        
-        因为没有合适的图，所以全部使用的一样的 
-        并且因为界面都是一致的就是内容不同，这里为了简单，使用的都是统一界面
-
-        解决办法：你可以通过页面传参的方式来进行区分
-        -->
 				<image class="navIcon" src="{{item.icon}}" mode="widthFix" lazy-load="false"></image>
 				<text class="navText">{{item.text}}</text>
 			</view>
@@ -20,9 +13,11 @@
 	</view>
 
 
+<!-- 这是一个循环来获取列表 通过循环feed-->
 
 	<block wx:for="{{feed}}" wx:for-index="idx" wx:for-item="item" data-idx="{{idx}}">
 		<view class="feed-item">
+		<!-- 其中 feed-source代表最上面显示的头像  以及该用户的信息 -->
 			<view class="feed-source">
 				<a class="">
 					<view class="avatar">
@@ -32,12 +27,16 @@
 				</a>
 				<image class="item-more" mode="aspectFit" src="../../images/icon/more.png"></image>
 			</view>
+
+			<!-- 用户下方的标题和内容 -->
 			<view class="feed-content">
 				<view class="question" qid="{{question_id}}" bindtap="bindQueTap">
+				<!-- 标题 -->
 					<a class="question-link">
 						<text>{{item.question}}</text>
 					</a>
 				</view>
+				<!-- 内容简述 -->
 				<view class="answer-body">
 					<view bindtap="bindItemTap">
 						<text class="answer-txt" aid="{{answer_id}}">{{item.answer_ctnt}}</text>

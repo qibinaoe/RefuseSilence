@@ -1,4 +1,5 @@
 //app.js
+
 App({
   onLaunch: function () {
     // 获取用户信息
@@ -21,9 +22,12 @@ App({
           })
         }
       }
-    })
+    });
+    
   },
   globalData: {
-    userInfo: null
-  }
-})
+    userInfo: null,
+    talkPerson:null,
+  },
+
+});

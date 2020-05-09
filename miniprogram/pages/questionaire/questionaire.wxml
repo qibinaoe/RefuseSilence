@@ -1,0 +1,7 @@
+<!--pages/questionaire/questionaire.wxml-->
+
+<view>1.你是傻逼吗？</view>
+<checkbox-group>
+<checkbox>是</checkbox>
+<checkbox>肯定是</checkbox>
+</checkbox-group>

@@ -1,19 +1,19 @@
 // pages/user/user.js
 const app = getApp()
 let userInfo = app.globalData.userInfo;
+
 Page({
 
   /**
    * 页面的初始数据
    */
-  data: {
-  },
+  data: {},
 
   onLoad: function (options) {
     var that = this;
     //获得设备信息
     wx.getSystemInfo({
-      success (res) {
+      success(res) {
         console.log(res.windowHeight);
         that.setData({
           phoneHeight: res.windowHeight,
@@ -37,7 +37,7 @@ Page({
   bindGetUserInfo(e) {
     var that = this;
     wx.getUserInfo({
-      success: function(res) {
+      success: function (res) {
         console.log(e.detail.userInfo);
         app.globalData.userInfo = e.detail.userInfo;
         that.setData({
@@ -48,17 +48,74 @@ Page({
       }
     })
   },
-  openSwitch:function(){
+  openSwitch: function () {
     var that = this;
     that.setData({
-      show:true
+      show: true
     })
   },
-  close:function(){
+  close: function () {
     var that = this;
     that.setData({
-      show:false
+      show: false
     })
+  },
+  switchQuestionaire: function () {
+    wx.navigateTo({
+      url: '/pages/questionaire/questionaire',
+    })
+  },
+
+  switchTalk: function () {
+    // 判断是否已经有谈心人
+    // 如果没有就先匹配
+    // 如果有直接跳转，并携带谈心人的数据，建立连接
+    // 这里默认没有
+    if (app.globalData.talkPerson == null) {
+      //匹配
+      wx.showLoading({
+        title: '匹配谈心人',
+        mask: true,
+      })
+
+      // if 匹配到了 这里用定时替换
+      setTimeout(function () {
+        wx.hideLoading();
+        wx.showToast({
+          title: '匹配成功',
+          icon: 'success',
+          duration: 2000,
+          success: () => {
+            // 匹配成功后
+            app.globalData.talkPerson = {
+              id: 123,
+              name: '卫浴姐'
+            };
+            wx.navigateTo({
+              url: '/pages/talk/talk'
+            })
+          }
+        })
+
+      }, 2000)
+      // else 显示匹配失败
+      // setTimeout(function () {
+      //   wx.hideLoading();
+      //   wx.showToast({
+      //     title: '匹配失败',
+      //     icon: 'none',
+      //     duration: 2000
+      //   })
+      //   return null;
+      // }, 5000)
+
+    }else{
+      wx.navigateTo({
+        url: '/pages/talk/talk'
+      })
+    }
+
+
   }
-  
+
 })

@@ -1,10 +1,9 @@
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-    
+    popQuestionaire: true
   },
 
   /**
@@ -80,5 +79,25 @@ Page({
     wx.navigateTo({
       url: '/pages/news/news',
     });
-  }
+  },
+  closePop: function () {
+    this.setData({
+      popQuestionaire: false
+    })
+},
+// popQuestionaire: function() {
+//     this.setData({
+//       popQuestionaire: true
+//     });
+// },
+switchQuestinaire:function(){
+  this.setData({
+    popQuestionaire: false
+  });
+  wx.navigateTo({
+    url: '/pages/questionaire/questionaire'
+  });
+}
+
+
 })
