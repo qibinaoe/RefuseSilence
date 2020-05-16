@@ -1,75 +1,39 @@
-/**index.wxss**/
-/* 宫格导航 */
-.nav{
-  width: 90%;
-  height: 132rpx;
-  margin: 0rpx auto;
-  margin-top: 40rpx;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  align-content: center;
-}
-.navItem{
-  width: 94rpx;
-  font-size: 20rpx;
-  text-align: center;
-  line-height: 35rpx;
-  color: #aaa;
-}
-.navIcon{
-  width: 84rpx;
-  height: 84rpx;
-}
-
-.container{
-  height: 1500rpx;
-}
-.container .search{
-  width: 735rpx;
-  height: 65rpx;
-  padding: 12.5rpx 0 12.5rpx 15rpx;
-  background: #2A8CE5;
-}
-.container .search-left{
-  flex: 8;
-  background: #4EA3E7;
-  text-align: left;
-}
-.container .search-left input{
-  display: inline-block;
-  height: 65rpx;
-  font-size: 26rpx;
-}
-.search-placeholder{
-  color: #8CCEFD;
-  line-height: 20rpx;
-}
-.container .search .search-left image{
-  display: inline-block;
-  width: 35rpx;
-  height: 35rpx;
-  padding: 15rpx 15rpx 15rpx 20rpx;
-}
-.container .search .search-right{
-  flex: 1;
-}
-.container .search .search-right image{
-  width: 45rpx;
-  height: 45rpx;
-  padding: 10rpx;
-}
 
 .container{
   padding: 0;
   font-size: 14rpx;
   background: #F0F4F3;
   color: #000;
+  height: 1400rpx;
 }
-/*feed-item part is in app.wxss for multiplexing*/
-/**app.wxss**/
+
+/* 宫格导航 */
+.nav{
+  width: 90%;
+  height: 118rpx;
+  margin: 0rpx auto;
+  margin-top: 10rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+.navItem{
+  width: 84rpx;
+  font-size: 20rpx;
+  text-align: center;
+  line-height: 35rpx;
+  color: #aaa;
+}
+.navIcon{
+  width: 74rpx;
+  height: 74rpx;
+}
+
+
+
+
 .container {
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -95,23 +59,7 @@
   flex-grow: 1;
   text-align: center;
 }
-.top-tab{
-  width: 750rpx;
-  height: 100rpx;
-  background: #298DE5;
-  color: #8CCEFD;
-  font-size: 28rpx;
-  line-height: 100rpx;
-  box-shadow: 0 2px 2px #bebebe;
-  margin: 0 0 8rpx 0;
-  position: fixed;
-  top: 0;
-  z-index: 9999;
-}
-.toptab.active{
-  color: #ffffff;
-  border-bottom: solid 2px #ffffff;
-}
+
 .container{
   padding: 0;
   font-size: 14rpx;
@@ -171,7 +119,6 @@
   font-size: 28rpx;
   font-weight: 600px;
   line-height: 40rpx;
-  text-space: 5rpx;
 }
 .container .feed-item .feed-content .answer-body{
   padding: 10rpx 0 0 0;
@@ -191,6 +138,6 @@
   padding: 0 10rpx 0 0;
   font-size: 24rpx;
 }
-.container .feed-item .feed-content .answer-actions .dot ::after{
+.container .feed-item .feed-content .answer-actions .dot:first-child ::after{
   content: "•";
 }

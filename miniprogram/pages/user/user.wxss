@@ -5,7 +5,7 @@
 
 .topBar {
   width: 100%;
-  height: 270rpx;
+  height: 200rpx;
   background-color: #fff;
 }
 
@@ -43,12 +43,7 @@
   margin-left: 20rpx;
 }
 
-.qiandao {
-  width: 90%;
-  height: 70rpx;
-  padding: 0rpx 30rpx;
-  font-size: 32rpx;
-}
+
 
 .qianText {
   float: left;

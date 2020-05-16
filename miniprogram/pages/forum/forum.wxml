@@ -1,4 +1,4 @@
-<!--index.wxml-->
+
 <scroll-view scroll-y="true" class="container" bindscrolltoupper="upper" upper-threshold="10" lower-threshold="5" bindscrolltolower="lower" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
 	<search></search>
 
@@ -14,23 +14,31 @@
 
 
 <!-- 这是一个循环来获取列表 通过循环feed-->
-
-	<block wx:for="{{feed}}" wx:for-index="idx" wx:for-item="item" data-idx="{{idx}}">
-		<view class="feed-item">
+ <!-- feed对象中包含
+ 1、发帖用户头像 封装在 feed ==> feed_source_img  
+ 2、发帖用户姓名 封装在 feed ==> feed_source_name
+ 3、发帖标题     封装在 feed ==> question
+ 4、发帖内容     封装在 feed ==> answer_ctnt
+ 5、点赞数量以及评论数量 feed ==> good_num / comment_num -->
+	<block wx:for="{{feed}}" wx:for-index="index" wx:for-item="item" >
+		<view class="feed-item" bindtap="switchFormitemDetail" 
+		data-index="{{index}}"
+		data-questionid="{{item.question_id}}" data-askname="{{item.feed_source_name}}"
+		data-question = "{{item.question}}" data-answer_ctnt="{{item.answer_ctnt}}">
 		<!-- 其中 feed-source代表最上面显示的头像  以及该用户的信息 -->
 			<view class="feed-source">
-				<a class="">
+				<a>
 					<view class="avatar">
 						<image src="{{item.feed_source_img}}"></image>
 					</view>
-					<text>{{item.feed_source_name}}{{item.feed_source_txt}}</text>
+					<text>{{item.feed_source_name}}</text>
 				</a>
-				<image class="item-more" mode="aspectFit" src="../../images/icon/more.png"></image>
+				<!-- <image class="item-more" mode="aspectFit" src="../../images/icon/more.png"></image> -->
 			</view>
 
 			<!-- 用户下方的标题和内容 -->
-			<view class="feed-content">
-				<view class="question" qid="{{question_id}}" bindtap="bindQueTap">
+			<view class="feed-content"  >
+				<view class="question">
 				<!-- 标题 -->
 					<a class="question-link">
 						<text>{{item.question}}</text>
@@ -38,18 +46,15 @@
 				</view>
 				<!-- 内容简述 -->
 				<view class="answer-body">
-					<view bindtap="bindItemTap">
+					<view>
 						<text class="answer-txt" aid="{{answer_id}}">{{item.answer_ctnt}}</text>
 					</view>
-					<view class="answer-actions" bindtap="bindItemTap">
+					<view class="answer-actions">
 						<view class="like dot">
 							<a>{{item.good_num}} 赞同 </a>
 						</view>
 						<view class="comments dot">
 							<a>{{item.comment_num}} 评论 </a>
-						</view>
-						<view class="follow-it">
-							<a>关注问题</a>
 						</view>
 					</view>
 				</view>

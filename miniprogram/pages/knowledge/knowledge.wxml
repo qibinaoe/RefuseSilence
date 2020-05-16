@@ -1,12 +1,22 @@
-<view>我是科普知识页面</view>
 
+<!-- 上方介绍栏 -->
+<view class="knowledge-item topnav-wrapper" >
+		<view class="img-container">
+			<image class="nav-img" src="../../images/background/title.jpg" >
+			</image>
+		</view>
+		<view class="nav-text text-upper">拒绝沉默
+		</view>
+		<view class="nav-text text-lower">敞开心扉 为您发声
+		</view>
+	</view>
 
 <!-- 性教育知识板块 -->
 
 <view class="knowledge-btn-list">
 	<view class="education-knowledge knowledge-item" bindtap="switchEducationModule">
 		<view class="img-container">
-			<image class="btn-img" src="../../images/button_background/education-background.jpg" >
+			<image class="btn-img" src="../../images/background/module1.jpg" >
 			</image>
 		</view>
 		<view class="btn-text">
@@ -17,7 +27,7 @@
 	<!-- 法律板块 -->
 	<view class="law-knowledge knowledge-item" bindtap="switchLawModule">
 		<view class="img-container">
-			<image class="btn-img" src="../../images/button_background/law-background.jpg">
+			<image class="btn-img" src="../../images/background/module2.jpg">
 			</image>
 		</view>
 		<view class="btn-text">
@@ -28,7 +38,7 @@
 	<!-- 新闻板块 -->
 	<view class="news-knowledge knowledge-item" bindtap="switchNewsModule">
 		<view class="img-container">
-			<image class="btn-img"src="../../images/button_background/news-background.jpg">
+			<image class="btn-img"src="../../images/background/module3.jpg">
 			</image>
 		</view>
 		<view class="btn-text">
@@ -38,7 +48,7 @@
 
 </view>
 
-<view class="bottom">我是底部</view>
+
 
 
 <!-- 弹窗 -->

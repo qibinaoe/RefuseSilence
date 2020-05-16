@@ -1,0 +1,9 @@
+<!--pages/forum/forumdetail.wxml-->
+<text> 问题的id号为:{{detail.questionid}}</text>
+<text>\n</text>
+<text> 问问题的人是:{{detail.askname}}</text>
+<text>\n</text>
+<text> 问题为:{{detail.question}}</text>
+<text>\n</text>
+<text> 回答为:{{detail.answer_ctnt}}</text>
+<text>\n</text>

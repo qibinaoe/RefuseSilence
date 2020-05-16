@@ -33,17 +33,7 @@
 				</view>
 				<view class="kefu" bindtap="switchTalk"><text class="icon-service"></text>谈心人</view>
 			</view>
-			<!-- 签到 -->
-			<view class="qiandao">
-				<!-- 签到涉及canvas所以暂时搁置 -->
-				<view class="qianText">
-					<text class="icon-dateTable text-gray"></text>
-					<text style="margin-left:20rpx">签到</text>
-				</view>
-				<view class="icon_">
-					<text class="icon-right text-gray"></text>
-				</view>
-			</view>
+
 		</view>
 		<!-- 选项卡部分 -->
 		<view class="chioce">
@@ -64,23 +54,32 @@
 				</view>
 				<text class="icon-right text-gray"></text>
 			</view>
-      <!-- 最近浏览选项 -->
-      <view class="choiceItem">
+			<!-- 最近浏览选项 -->
+			<view class="choiceItem">
 				<view class="">
 					<text class="icon-list text-gray"></text>
 					<text style="margin-left:20rpx">最近浏览</text>
 				</view>
 				<text class="icon-right text-gray"></text>
 			</view>
-      <!-- 问卷调查 -->
-      <view class="choiceItem">
+			<!-- 问卷调查 -->
+			<view class="choiceItem">
 				<view class="">
 					<text class="icon-list text-gray"></text>
 					<text style="margin-left:20rpx" bindtap="switchQuestionaire">问卷调查</text>
 				</view>
 				<text class="icon-right text-gray"></text>
 			</view>
-     
+			
+			<!-- 关于 -->
+			<view class="choiceItem">
+				<view class="">
+					<text class="icon-list text-gray"></text>
+					<text style="margin-left:20rpx" bindtap="switchAbout">关于</text>
+				</view>
+				<text class="icon-right text-gray"></text>
+			</view>
+			
 		</view>
 	</view>
 </block>

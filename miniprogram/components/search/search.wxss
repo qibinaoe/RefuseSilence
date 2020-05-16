@@ -1,3 +1,4 @@
+@import '../../style/icons.wxss';
 /* 搜索框 */
 .search{
   width: 90%;
@@ -5,7 +6,8 @@
   display: flex;
   align-items: center;
   margin: 0rpx auto;
-  margin-bottom: 15rpx;
+  margin-bottom: 8rpx;
+  margin-top: 8rpx;
 }
 
 .search-left{
@@ -30,4 +32,7 @@
   color: #aaa;
   text-align: center;
   margin-left: 30rpx;
+}
+.fangdajing{
+  font-size: 25rpx;
 }

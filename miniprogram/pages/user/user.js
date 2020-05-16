@@ -65,7 +65,11 @@ Page({
       url: '/pages/questionaire/questionaire',
     })
   },
-
+  switchAbout: function () {
+    wx.navigateTo({
+      url: '/pages/user/about',
+    })
+  },
   switchTalk: function () {
     // 判断是否已经有谈心人
     // 如果没有就先匹配
